@@ -340,7 +340,20 @@ k	  <p><img width="100%" src="img/kappa2.jpg"></p>
         <!-- INTRO INFORMATIO-->
         <div class="col-lg-6 col-lg-offset-3">
 	  <p>When you want to ask someone in japanese, please tap buttons below. Japanese messages would be shown. It would be help you.</p>
-          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pasmo_ask_diag">Where should I touch PASMO on</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pasmo_diag0">Where should I touch PASMO on</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pasmo_diag1">Where can I top up PASMO?</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pasmo_diag2">How can I have amount of yen left on PASMO?</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pasmo_diag3">May I pay with PASMO?</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pasmo_diag4">Can I pay by cash for the rest?</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag0">Are you at the end of the line?</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag1">Where does this bus go？</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag2">Where’s the bus stop？</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag3">Which bus goes to this place?</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag4">Let me know If the bus will reach to ShinYokohama station</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag5">Will the bus come in about 5 minutes?</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag6">Will the bus come in about 10 minutes?</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag7">Would you tell me when it’s my stop？</button></p>
+          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag8">Please let me know when we arrive there.</button></p>
         </div>
       </div>
     </div>
@@ -461,16 +474,16 @@ k	  <p><img width="100%" src="img/kappa2.jpg"></p>
 
 
   <!-- モーダルダイアログ -->
-  <div class="modal fade" id="pasmo_ask_diag" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+  <div class="modal fade" id="pasmo_diag0" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
 	<div class="modal-header">
-	  <h2 class="modal-title" id="demoModalTitle">Where should I touch PASMO on?</h2>
+	  <h4 class="modal-title" id="demoModalTitle">Where should I touch PASMO on?</h4>
 	  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	    <span aria-hidden="true">&times;</span>
 	  </button>
 	</div>
-	<div class="modal-body"> PASMOはどこにタッチすればいいですか？ </div>
+	<h3><div class="modal-body"> PASMOはどこにタッチすればいいですか？ </div></h3>
 	<div class="modal-footer">
 	  <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
 	  <!-- button type="button" class="btn btn-primary"></button -->
@@ -478,6 +491,133 @@ k	  <p><img width="100%" src="img/kappa2.jpg"></p>
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="pasmo_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+	<div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Where can I top up PASMO?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<h3><div class="modal-body"> どこでPASMOをチャージできますか？ </div></h3>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+	  <!-- button type="button" class="btn btn-primary"></button -->
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="pasmo_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+	<div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">How can I have amount of yen left on PASMO?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<h3><div class="modal-body"> PASMOの残高を知りたいのですが。 </div></h3>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+	  <!-- button type="button" class="btn btn-primary"></button -->
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="pasmo_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+	<div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">May I pay with PASMO?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<h3><div class="modal-body"> PASMOは使えますか？ </div></h3>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+	  <!-- button type="button" class="btn btn-primary"></button -->
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="pasmo_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+	<div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Can I pay by cash for the rest?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<h3><div class="modal-body"> 不足分は現金で払えますか？ </div></h3>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+	  <!-- button type="button" class="btn btn-primary"></button -->
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="bus_diag0" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Are you at the end of the line?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+	<h3><div class="modal-body"> ここが最後尾ですか？ </div></h3>
+	<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button><!-- button type="button" class="btn btn-primary"></button --></div></div></div></div>
+
+  <div class="modal fade" id="bus_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Where does this bus go?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+	<h3><div class="modal-body"> このバスは、どこへ行きますか？ </div></h3>
+	<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button><!-- button type="button" class="btn btn-primary"></button --></div></div></div></div>
+
+  <div class="modal fade" id="bus_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Where’s the bus stop？</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+	<h3><div class="modal-body"> バス停は、どこですか？ </div></h3>
+	<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button><!-- button type="button" class="btn btn-primary"></button --></div></div></div></div>
+
+  <div class="modal fade" id="bus_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Which bus goes to this place?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+	<h3><div class="modal-body"> この場所に行くバスはどれですか？ </div></h3>
+	<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button><!-- button type="button" class="btn btn-primary"></button --></div></div></div></div>
+
+  <div class="modal fade" id="bus_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Let me know If the bus will reach to ShinYokohama station ?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+	<h3><div class="modal-body"> バスが新横浜駅に着いたら教えてくれませんか？ </div></h3>
+	<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button><!-- button type="button" class="btn btn-primary"></button --></div></div></div></div>
+
+  <div class="modal fade" id="bus_diag5" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Will the bus come in about 5 minutes?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+	<h3><div class="modal-body"> バスは5分ぐらいで来ますか？ </div></h3>
+	<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button><!-- button type="button" class="btn btn-primary"></button --></div></div></div></div>
+
+  <div class="modal fade" id="bus_diag6" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Will the bus come in about 10 minutes?</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+	<h3><div class="modal-body"> バスは10分ぐらいで来ますか？ </div></h3>
+	<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button><!-- button type="button" class="btn btn-primary"></button --></div></div></div></div>
+
+  <div class="modal fade" id="bus_diag7" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Would you tell me when it’s my stop？</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+	<h3><div class="modal-body"> 降りるバス停に来たら、教えてくれますか？ </div></h3>
+	<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button><!-- button type="button" class="btn btn-primary"></button --></div></div></div></div>
+
+  <div class="modal fade" id="bus_diag8" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header">
+	  <h4 class="modal-title" id="demoModalTitle">Please let me know when we arrive there.</h4>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+	<h3><div class="modal-body"> そこに着いたら教えてください。 </div></h3>
+	<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button><!-- button type="button" class="btn btn-primary"></button --></div></div></div></div>
+
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
