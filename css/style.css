@@ -34,6 +34,11 @@ p {
   text-align: center;
 }
 
+/* Buttons */
+button {
+  filter:drop-shadow(5px 5px 5px white);
+}
+
 /* Links */
 
 a {
