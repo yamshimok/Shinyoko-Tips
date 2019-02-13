@@ -5,6 +5,12 @@
 * License: https://templatemag.com/license/
 */
 
+/* Button Toolbar added by Yama190213*/
+ButtonToolBar {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   background-color: #f2f2f2;
 /*  font-family: 'EB Garamond', serif; */
