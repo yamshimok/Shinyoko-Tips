@@ -1,50 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Shinyoko-Tips - how to enjoy Shinyokohama</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="japan,travel,trip,sightseen,shortstay,yokohama,shinyokohama,kitashinyokohama,center-minami,kannai,yayoi-ken,kappasushi,yokohamaya,cando,espot,daiso,suica,pasmo,tips,subway,bus,100yen,shabuyo,breadbox,kappasushi,yokohamaya,ramen,noodle,shabushabu,sushi" name="keywords">
-  <meta content="How to enjoy around shinyokohama, a japanese man who lives in shinyokohama tell you." name="description">
+    <!--- basic page needs    ================================================== -->
+    <meta charset="utf-8">
+    <title>Shinyoko-Tips - how to enjoy Shinyokohama</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="japan,travel,trip,sightseen,shortstay,yokohama,shinyokohama,kitashinyokohama,center-minami,kannai,yayoi-ken,kappasushi,yokohamaya,cando,espot,daiso,suica,pasmo,tips,subway,bus,100yen,shabuyo,breadbox,kappasushi,yokohamaya,ramen,noodle,shabushabu,sushi" name="keywords">
+    <meta content="How to enjoy Shinyokohama in a way of both usual life and sightseen, a japanese man who lives in shinyokohama tell you." name="description">
+    <meta name="author" content="">
+    <!-- mobile specific metas    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <!-- CSS    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- script    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+    <!-- favicons    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133844353-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133844353-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-133844353-1');
-  </script>
-
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
-  <!-- link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700|EB+Garamond" rel="stylesheet" -->
-
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Template Name: Minimal
-    Template URL: https://templatemag.com/minimal-bootstrap-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+      gtag('config', 'UA-133844353-1');
+    </script>
 </head>
-
 <style>
-
   /* CSS for LQIP blur added by Yama190220
    use calss "lazyload blur" instead of "lazyload" */
 .blur {
@@ -52,1078 +41,133 @@
     filter: blur(3px);
     transition: filter 600ms, -webkit-filter 600ms;
 }
-
 .blur.lazyloaded {
     -webkit-filter: blur(0);
     filter: blur(0);
 }
-
-/* CSS for button margin added by Yama190221 */
-.btn {
-    margin-top: 2px;
+.yy_title {
+    padding: 0.4em 0.5em; /* 文字の上下 左右の余白 */
+    color: #494949; /* 文字色 */
+    /* background: #f4f4f4; */ /* 背景色 */
+    border-left: solid 10px #7db4ff; /* 左線 */
+    border-bottom: solid 3px #d4d4d7; /* 下線 */
 }
-
-/* CSS for パンくずリスト added by Yama190221 */
-/** The Magic **/
-.btn-breadcrumb .btn:not(:last-child):after {
-    content: " ";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
-    border-left: 10px solid white;
-    position: absolute;
-    top: 50%;
-    margin-top: -17px;
-    left: 100%;
-    z-index: 3;
+.yy_marker {
+    background: linear-gradient(transparent 20%, #dd3333 20%);
 }
-.btn-breadcrumb .btn:not(:last-child):before {
-    content: " ";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
-    border-left: 10px solid rgb(173, 173, 173);
-    position: absolute;
-    top: 50%;
-    margin-top: -17px;
-    margin-left: 1px;
-    left: 100%;
-    z-index: 3;
-}
-
-/** The Spacing **/
-.btn-breadcrumb .btn {
-    padding:6px 12px 6px 24px;
-}
-.btn-breadcrumb .btn:first-child {
-    padding:6px 6px 6px 10px;
-}
-.btn-breadcrumb .btn:last-child {
-    padding:6px 18px 6px 24px;
-}
-
-/** Default button **/
-.btn-breadcrumb .btn.btn-default:not(:last-child):after {
-    border-left: 10px solid #fff;
-}
-.btn-breadcrumb .btn.btn-default:not(:last-child):before {
-    border-left: 10px solid #ccc;
-}
-.btn-breadcrumb .btn.btn-default:hover:not(:last-child):after {
-    border-left: 10px solid #ebebeb;
-}
-.btn-breadcrumb .btn.btn-default:hover:not(:last-child):before {
-    border-left: 10px solid #adadad;
-}
-
-/** Primary button **/
-.btn-breadcrumb .btn.btn-primary:not(:last-child):after {
-    border-left: 10px solid #428bca;
-}
-.btn-breadcrumb .btn.btn-primary:not(:last-child):before {
-    border-left: 10px solid #357ebd;
-}
-.btn-breadcrumb .btn.btn-primary:hover:not(:last-child):after {
-    border-left: 10px solid #3276b1;
-}
-.btn-breadcrumb .btn.btn-primary:hover:not(:last-child):before {
-    border-left: 10px solid #285e8e;
-}
-
-/** Success button **/
-.btn-breadcrumb .btn.btn-success:not(:last-child):after {
-    border-left: 10px solid #5cb85c;
-}
-.btn-breadcrumb .btn.btn-success:not(:last-child):before {
-    border-left: 10px solid #4cae4c;
-}
-.btn-breadcrumb .btn.btn-success:hover:not(:last-child):after {
-    border-left: 10px solid #47a447;
-}
-.btn-breadcrumb .btn.btn-success:hover:not(:last-child):before {
-    border-left: 10px solid #398439;
-}
-
-/** Danger button **/
-.btn-breadcrumb .btn.btn-danger:not(:last-child):after {
-    border-left: 10px solid #d9534f;
-}
-.btn-breadcrumb .btn.btn-danger:not(:last-child):before {
-    border-left: 10px solid #d43f3a;
-}
-.btn-breadcrumb .btn.btn-danger:hover:not(:last-child):after {
-    border-left: 10px solid #d2322d;
-}
-.btn-breadcrumb .btn.btn-danger:hover:not(:last-child):before {
-    border-left: 10px solid #ac2925;
-}
-
-/** Warning button **/
-.btn-breadcrumb .btn.btn-warning:not(:last-child):after {
-    border-left: 10px solid #f0ad4e;
-}
-.btn-breadcrumb .btn.btn-warning:not(:last-child):before {
-    border-left: 10px solid #eea236;
-}
-.btn-breadcrumb .btn.btn-warning:hover:not(:last-child):after {
-    border-left: 10px solid #ed9c28;
-}
-.btn-breadcrumb .btn.btn-warning:hover:not(:last-child):before {
-    border-left: 10px solid #d58512;
-}
-
-/** Info button **/
-.btn-breadcrumb .btn.btn-info:not(:last-child):after {
-    border-left: 10px solid #5bc0de;
-}
-.btn-breadcrumb .btn.btn-info:not(:last-child):before {
-    border-left: 10px solid #46b8da;
-}
-.btn-breadcrumb .btn.btn-info:hover:not(:last-child):after {
-    border-left: 10px solid #39b3d7;
-}
-.btn-breadcrumb .btn.btn-info:hover:not(:last-child):before {
-    border-left: 10px solid #269abc;
-}
-
 </style>
+<body id="top">
+    <!-- pageheader
+    ================================================== -->
+    <section class="s-pageheader s-pageheader--home">
+        <header class="header">
+            <div class="header__content row">
+	      <h1 style="color: white;">Shinyoko-Tips</h1>
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+                <nav class="header__nav-wrap">
+                    <h2 class="header__nav-heading h6">Site Navigation</h2>
+                    <ul class="header__nav">
+                        <li><a href="index.html" title="">Home</a></li>
+                        <li><a href="pasmo.html" title="">Pasmo</a></li>
+                        <li class="has-children">
+                            <a href="#0" title="">Transportation</a>
+                            <ul class="sub-menu">
+                                <li><a href="train.html" title="">Train</a></li>
+				<li><a href="bus.html" title="">Bus</a></li>
+			    </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#0" title="">Shopping</a>
+                            <ul class="sub-menu">
+                                <li><a href="cando.html">CanDo</a></li>
+				<li><a href="daiso.html">Daiso</a></li>
+				<li><a href="espot.html">ESPOT</a></li>
+			    </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#0" title="">Restaurant</a>
+                            <ul class="sub-menu">
+                                <li><a href="yayoi.html">Yayoi-ken</a></li>
+				<li><a href="kappasushi.html">Kappa-Sushi</a></li>
+				<li><a href="breadbox.html">BreadBox</a></li>
+				<li><a href="yokohamaya.html">Yokohama-Ya</a></li>
+				<li><a href="shabuyo.html">Shabu-Yo</a></li>
+				<li><a href="ringerhut.html">RingerHut</a></li>
+				<li><a href="chateraise.html">Chateraise</a></li>
+			    </ul>
+                        </li>
+                        <!-- li><a href="medicine.html" title="">Medicine</a></li -->
+                        <li><a href="contact.html" title="">Contact Me</a></li>
+                        <!-- li><a href="style-guide.html" title="">Styles</a></li>
+                        <li><a href="about.html" title="">About</a></li -->
+                    </ul> <!-- end header__nav -->
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+                </nav> <!-- end header__nav-wrap -->
+            </div> <!-- header-content -->
+        </header> <!-- header -->
+    </section> <!-- end s-pageheader -->
+    <!-- s-content
+    ================================================== -->
+    <section class="s-content s-content--narrow s-content--no-padding-bottom">
 
-<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+        <article class="row format-video">
 
-  <!-- Menu -->
-  <nav class="menu" id="theMenu">
-    <div class="menu-wrap">
-      <h1 class="logo"><a href="index.html#home">Shinyoko-Tips</a></h1>
-      <i class="fa fa-times-circle menu-close"></i>
-      <a href="#home" class="smoothscroll">Home</a>
-      <a href="#pasmo" class="smoothscroll">Pasmo(Suica)</a>
-      <a href="#train" class="smoothscroll">Train</a>
-      <a href="#bus" class="smoothscroll">Bus</a>
-      <div class="dropdown">
-	<a role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-	  Shopping
-	  <span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-	  <li><a class="smoothscroll" href="#cando">CanDo</a></li>
-	  <li><a class="smoothscroll" href="#daiso">Daiso</a></li>
-	  <li><a class="smoothscroll" href="#espot">Espot</a></li>
-	</ul>
-      </div>
-      <div class="dropdown">
-	<a role="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-	  Food
-	  <span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-	  <li><a class="smoothscroll" href="#yayoi">Yayoi-Ken</a></li>
-	  <li><a class="smoothscroll" href="#kappa">Kappa-Sushi</a></li>
-	  <li><a class="smoothscroll" href="#breadbox">BreadBox</a></li>
-	  <li><a class="smoothscroll" href="#yokohamaya">Yokohama-Ya</a></li>
-	  <li><a class="smoothscroll" href="#shabuyo">Shabu-Yo</a></li>
-	  <li><a class="smoothscroll" href="#ringerhut">RingerHut</a></li>
-	  <li><a class="smoothscroll" href="#shato">Chateraise</a></li>
-	</ul>
-      </div>
-      <a href="#medicine" class="smoothscroll">Medicine</a>
-      <a href="#dialog" class="smoothscroll">Dialogs</a>
-      <a href="#contact" class="smoothscroll">Contact</a>
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-dribbble"></i></a>
-      <a href="#"><i class="fa fa-envelope"></i></a>
-    </div>
+            <div class="s-content__header col-full">
+                <h1 class="s-content__header-title">Shinyokohama?</h1>
+            </div> <!-- end s-content__header -->
 
-    <!-- Menu button -->
-    <div id="menuToggle"><i class="fa fa-bars"></i></div>
-  </nav>
+            <div class="col-full s-content__main">
+	        <h2 class="yy_title">Convenient</h2>
+		<p>There are 3 lines here, Shinkansen, Yokohama Subway Line, and JR which is known as Yokohama Line. There are also various bus lines and you can get on it with ONLY 220 yen whereever you get off. Around the station, there are many restaurants, convenience stores and drug stores.</p>
+	    </div>
 
-  <!-- ========== HEADER SECTION ========== -->
-  <section id="home" name="home"></section>
-  <div id="headerwrap">
-    <div class="container">
-      <div class="logo">
-        <img width="15%" src="img/SYT_logo.jpg">
-      </div>
-      <br>
-      <div class="row">
-        <h1>Shinyoko-Tips</h1>
-        <br>
-        <h3>I, am a japanese living near Shin-Yokohama, tell you some tips of Shin-Yokohama and around there.</h3>
-        <br>
-        <br>
-        <div class="col-lg-6 col-lg-offset-3">
+            <div class="col-full s-content__main">
+	        <h2 class="yy_title">Many Events</h2>
+		    <p>Many events are held at both Yokohama Arena and Nissan Stadium. In Yokohama Arena, various artists did a concert. In Nissan Stadium, the Rugby W cup was held on 2020. So many people will habe a chance to come here.</p>
+	    </div>
+
+            <div class="col-full s-content__main">
+	        <h2 class="yy_title">It's the purpose</h2>
+		<p>I want to introduce how do you enjoy Shinyokohama during your staying. I live in Shinyokohama around 10 years. So It is not too much to say I know everything related to Shinyokohama. If you want to enjoy here, it would not be a loss for reading this site.</p>
+		<p>If you want to know more, please don't hesitate to contact to me.</p>
+	    </div>
+
+	</article>
+    </section>
+    <footer class="s-footer">
+        <div class="s-footer__main">
+            <div class="row">
+            </div>
+        </div> <!-- end s-footer__main -->
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>息 Copyright Philosophy 2018</span>                         <span>Site Template by <a href="https://colorlib.com/">Colorlib</a></span>
+                    </div>
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
+    </footer> <!-- end s-footer -->
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- /container -->
-  </div>
-  <!-- /headerwrap -->
-
-  <!-- ========== Pasmo SECTION ========== -->
-  <section id="pasmo" name="pasmo"></section>
-  <div id="f">
-    <div class="container">
-      <div class="row">
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	<h3>PASMO (Suica)</h3>
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <!-- PASMO INFORMATION -->
-        <div class="col-lg-6 col-lg-offset-3">
-	  <h3>WHAT IS PASMO</h3><img width="75%" class="lazyload blur" data-src="img/pasmo0.jpg" src="img/pasmo0_low.jpg">
-	  <p align="left">PASMO is a prepaid e-money card for moving with buses and trains, shopping. Around ShinYokohama, PASMO is also convenient just as same as Suica.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>WHY NOT Suica</h3>
-	  <p align="left">In ShinYokohama station, it is quite difficult to get Suica. Because there are only a few vending machines for Suica and they are too far from Shinkansen exit. (Even many of japanese would NOT reach there)</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>WHERE GET PASMO</h3>
-          <p align="left">You can buy PASMO with the ticket vending machine at Yokohama subway Line, where is at B2F floor in ShinYokohama Station.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/concourse.jpg" src="img/concourse_low.jpg"></p>
-	  <p align="left">After getting off Shinkansen, go to the concourse. You can found 3 exit gates of Shinkansen above pictures.</p>
-	  <p align="left">At the concourse, you stand in front of the timetables of Shinkansen. Then on the left-hand side, you can see downstairs to the gate of Yokohama Subway.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/yoko_sub_gate.jpg" src="img/yoko_sub_gate_low.jpg"></p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/pasmo_vending.jpg" src="img/pasmo_vending_low.jpg"></p>
-	  <p align="left">At the bottom of downstairs, you can find the ticket vending machine of Yokohama Subway.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>HOW TO BUY PASMO</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/how2buy_pasmo.jpg" src="img/how2buy_pasmo_low.jpg"></p>
-          <p align="left">Please see above pictures following order,<br>①②<br>③④<br>⑤⑥</p>
-	  <p align="left">①Touch PASMO button.
-	    <br>②Touch 'issue PASMO'.
-	    <br>③Touch Red Circle of the picture. This means you buy unnamed PASMO. I recommend unnamed PASMO for short stay or sightseeing. The other is 'named PASMO'. If you want to know the difference in detail, please search other sites :)
-	    <br>④Touch price as initial top-up for PASMO. You can choose 1000yen, 2000yen, 3000yen, 4000yen, 5000yen and 10000yen. Please note that this includes 500yen for PASMO's deposit. So if you choose 3000yen, you will get 2500yen left on PASMO.
-	    <br>⑤Put cash. You can also use coins. Put coins into red circle of the picture.
-	    <br>⑥You can get finally your PASMO and changes.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>HOW TO TOP UP (part I)</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/how2topup1.jpg" src="img/how2topup1_low.jpg"></p>
-          <p align="left">Please see above pictures following order,<br>①②<br>③④</p>
-          <p align="left"><u>Note: PASMO cannot be topped up over 20000 yen.</u></p>
-	  <p align="left">①Touch PASMO button.
-	    <br>②Touch 'charge, history indication, history printing'.
-	    <br>③Put your PASMO
-	    <br>④Touch the button of charge amount of money you want.</p>
-	  <p align="left">The payment is just same as above buying PASMO.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>HOW TO TOP UP (part II)</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/how2topup2.jpg" src="img/how2topup2_low.jpg"></p>
-          <p align="left">You will find above machine at every Yokohama subway stations. But it can accept ONLY 1000 yen bill.</p>
-	  <p align="left">⓪Touch ENGLISH button, if you want.
-	    <br>①Insert your PASMO.
-	    <br>②Choose amount of money you want top up.
-	    <br>③Put 1000 yen bills ONE BY ONE.
-	    <br>④If you want receipt, push PRINT button during blinking.</p>
-	  <p align="left">Then take your PASMO.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>HOW TO CHECK PASMO BALANCE</h3>
-          <p align="left">If your smartphone has android and NFC, for example which means you can use google pay, you can check PASMO balance with following app.</p>
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 48.8281%; padding-top: 3px120px;"><a href="https://play.google.com/store/apps/details?id=jp.co.shekeen.BalanceReaderFree&amp;hl=en_US" data-iframely-url="//cdn.iframe.ly/tmbAclQ"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <p align="left">Launch the app, then touch your smartphone on your PASMO. You can see PASMO balance(yen) like below.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/cardreader.jpg" src="img/cardreader_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <h3>Japanese sentenses</h3>
-	  <p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese translations would be shown. It would be help you.</p>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag1">Where can I buy the ticket?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag2">Is the train delayed?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag3">Will the train come soon?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag4">Where is the map around the station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag5">Where is the track (platform)?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag6">Where can I buy 1day pass?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag7">Where is the gate?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag8">Where can I touch PASMO on?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag9">Where is the ticket window?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag10">Where is the elevator (lift)?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag11">Where can I top up PASMO?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag12">How can I have amount of yen left on PASMO?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag13">Where can I buy the ticket?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag14">Whｨch exit number can I go out at?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag15">This is our stop.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag16">Can I reach to Kannai station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag17">Can I reach to Center-Minami station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag18">Can I reach to Kita-ShinYokohama?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag19">Can I reach to Nippa station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag20">Can I reach to ShinYokohama station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag21">Can I reach to the station?</button>
-        </div>
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /f -->
-
-  <!-- ========== Train SECTION ========== -->
-  <section id="train" name="train"></section>
-  <div id="f">
-    <div class="container">
-      <div class="row">
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	<h3>Train</h3>
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <!-- Train INFORMATION -->
-        <div class="col-lg-6 col-lg-offset-3">
-	  <h3>ENTER/EXIT TICKET GATE</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/pasmotouch.jpg" src="img/pasmotouch_low.jpg"></p>
-	  <p align="left">In ShinYokohama station, you can get on both Yokohama Subway Lines and Yokohama Lines. You can enter the ticket gate by touching pink circle of above picture with PASMO. At that time, please note blue circle of above picture. This upper arrow mark (⇧) means the gate can accept touching of PASMO. If not, usually red cross mark(❌) will be shown, the gate would not accept any touching of PASMO.</p>
-	  <p>When exitting the gate, you also need touching of PASMO.</p>
-	  <h align="left"r style="border-top: 3px double;">
-	  <h3>MANNER OF YOKOHAMA SUBWAY LINES</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/subwaymanner.jpg" src="img/subwaymanner_low.jpg"></p>
-	  <p>At the front of each platform's door, You can wait for coming trains (see above picture on the left). While waiting, get in line like red circle in the middle of abov align="left"e picture. It is common scene of waiting trains like above picture on the right. Please note that you have to wait getting on the train until passengers getting off.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>MANNER OF YOKOHAMA LINES</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/yokohamalinemanner.jpg" src="img/yokohamalinemanner_low.jpg"></p>
-	  <p>At the front of each green marks on the platform, You can wait for coming trains (see red circle of above picture on the left). While waiting, get in line like red ci align="left"rcle in the middle of above picture. It is common scene of waiting trains like above picture on the right. Please note that you have to wait getting on the train until passengers getting off.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>Japanese sentenses</h3>
-	  <p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese translations would be shown. It would be help you.</p>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag1">Where can I buy the ticket?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag2">Is the train delayed?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag3">Will the train come soon?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag4">Where is the map around the station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag5">Where is the track (platform)?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag6">Where can I buy 1day pass?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag7">Where is the gate?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag8">Where can I touch PASMO on?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag9">Where is the ticket window?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag10">Where is the elevator (lift)?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag11">Where can I top up PASMO?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag12">How can I have amount of yen left on PASMO?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag13">Where can I buy the ticket?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag14">Whｨch exit number can I go out at?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag15">This is our stop.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag16">Can I reach to Kannai station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag17">Can I reach to Center-Minami station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag18">Can I reach to Kita-ShinYokohama?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag19">Can I reach to Nippa station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag20">Can I reach to ShinYokohama station?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag21">Can I reach to the station?</button>
-        </div>
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /f -->
-
-  <!-- ========== Bus SECTION ========== -->
-  <section id="bus" name="bus"></section>
-  <div id="f">
-    <div class="container">
-      <div class="row">
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	<h3>Bus</h3>
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <!-- Bus INFORMATION -->
-        <div class="col-lg-6 col-lg-offset-3">
-	  <h3>HOW TO GET ON BUS</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/busmanner.jpg" src="img/busmanner_low.jpg"></p>
-	  <p align="left">Wait the bus at the bus stop in red circle of above picture on the left.</p>
-	  <p align="left">If someone has already waited, get in line like red arrow of above picture on the left.</p>
-	  <p align="left">The bus will come so that there is the door in front of bus stop. After getting on the bus, you will see the machine like above picture on the right. Touch red circle with your PASMO, then payment is completed.</p>
-	  <p align="left">All buses start from Shinyokohama, you can only pay in advance with PASMO, 216yen, wherever you will get off.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>HOW TO GET OFF BUS</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/busbutton.jpg" src="img/busbutton_low.jpg"></p>
-	  <p align="left">When you are going to get off at next bus stop, push the 'getting off' button like red circle of above picture on the left. Then turn on the japanese message which means 'The bus will stop at next bus stop'. Let's get off after the bus will stop and the door will open.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>Japanese sentenses</h3>
-	  <p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese translations would be shown. It would be help you.</p>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag1">Where is the bus stop?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag2">Are you at the end of the the line?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag3">Where can I touch PASMO on?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag4">I would like to buy 1day pass.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag5">Does this bus go to there?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag6">Let me know when the bus reach there.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag7">Will the bus come in about 5 minutes?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag8">Will the bus come in about 10 minutes?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag9">This is our stop.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag10">Next is our stop.</button>
-        </div>
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /f -->
-
-  <!-- ========== Food SECTION ========== -->
-  <section id="food" name="food"></section>
-  <div id="f">
-    <div class="container">
-      <div class="row">
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	<h3>FOOD</h3>
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-      </div>
-
-      <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-      <div class="row">
-        <!-- Food INFORMATION -->
-        <div id="yayoi" name="yayoi" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>Yayoi-Ken (やよい軒)</h3>
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.9167%; padding-top: 3px120px;"><a href="http://www.yayoiken.com/" data-iframely-url="//cdn.iframe.ly/4uzUShw"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <p align="left">It is so reasonable japanese restaurant. And you don't need speaking japanese so much.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/yayoi.jpg" src="img/yayoi_low.jpg"></p>
-	  <p align="left">To go to nearest YAYOI-KEN, get off at Kannai(B17) from Shinyokohama(B25) via Yokohama Subway.</p>
-	  <p align="left">You will find the ticket vending machine as soon as entering YAYOI-KEN. Push 'English' button, put enough bills and coins into blue circle of above picture at bottom, and choose what you want. Then you can get ticket and changes from yellow circle of above picture at bottom.</p>
-	  <p align="left">You can sit on any seat you want. Usually the staff will come to take your tickets and confirm orders. You don't need to order to say anything, because they will only check tickets.</p>
-	  <p align="left">If the staff doesn't seem to come over 5 minutes, please call him by the bell on the table and give your tickets.</p>
-	  <p align="left">You can have allyou-can-drink green tea and water by yourself.</p>
-	  <p align="left">After finishing dishes, you can leave there freely.</p>
-	  <p align="left">The place of nearest YAYOI-KEN is shown below.</p>
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x60185cf430e5dad1:0x2684732770001fc7?utm_source=mstt_1" data-iframely-url="//cdn.iframe.ly/dgbkAuM"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <h3>Japanese sentenses</h3>
-	  <p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese translations would be shown. It would be help you.</p>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yayoi_diag1">Where is the rice steamer?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yayoi_diag2">Give me another bottle of japanese pickles.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yayoi_diag3">Where is the tea pot?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yayoi_diag4">Give me another bottle of water.</button>
-	</div>
-
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-        <div id="kappa" name="kappa" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>Kappa-Sushi (かっぱ寿司)</h3>
-	  <p>It is nearest KAITEN SUSHI from Shinyokohama and not so crowded in weekday 14:00-17:00.</p>
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x60185f2bc9f066a7:0x2bdaabcc40110dca?utm_source=mstt_1" data-iframely-url="//cdn.iframe.ly/NypI13f"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/kappa1.jpg" src="img/kappa1_low.jpg"></p>
-	  <p align="left">① Kappasushi's nearest station is Kita-ShinYokohama(B26) next to ShinYokohama(B25).
-	    <br>② This is the appearance of Kappasushi.
-	    <br>③ You can find the reservation machine near the entrance.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/kappa2.jpg" src="img/kappa2_low.jpg"></p>
-	  <p align="left">④ Touch the button of yellow circle, then choose table seat(テーブル席 in japanese) or counter seat(カウンター席 in japanese), and input how many adults(大人 in japanese) and child(子供 in japanese).
-	    <br>⑤ Then you can get the ticket with the reservation number. In the pictire, the number is 283, the number of adults is 2, child is 0. The type of seat is table seat. You can know what number will be called next in the picture ④'s red circle. The blue circle means eatimated time(2分 means 2 minutes in english) of next number to be called.
-	    <br>⑥ When your number is same as the machine shows, show your ticket to the staff. Then you will get your seat number, let go your seat by yourself.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/kappa3.jpg" src="img/kappa3_low.jpg"></p>
-	  <p align="left">⑦ You will find the 'multilingual' button on the touch panel. Touch it and choose English. All items would be shown in English on touchscreen.
-	    <br>⑧ There are chopsticks in the box of blue circle. It is the soy sauce of red circle. It is the wasabi of pink circle. It is the green tea powder of green circle.
-	    <br>⑨ Put two or three dashes of the green tea powder into the cup. Next push the black button by the cup which you keep holding. Then hot water will be poured into the cup. Please pay attention for the spout.
-	    <br>⑩ You can take plates from the lane of red circle as you want. Never return the plate which you have taken. If you order something by touch screen, the plate will come from the express train on the belt of blue circle. The train will bring your plates and stop at front of you. You take plates and press the button on touchscreen, then the train will leave.
-	    <br>⑪ When you finish dishes, it is common manner that stack plates every 10 plates. Then touch the touchscreen to check. The staff will come and count up your plates and either give you a paper bill or enter it electronically, while showing you the total. You take the table card (its a little clipboard) to the register and pay.</p>
-	  <h3>Japanese sentenses</h3>
-	  <p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese translations would be shown. It would be help you.</p>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kappa_diag1">Have I already called? (with the ticket in your hand)</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kappa_diag2">Give me another bottle of powdered tea.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kappa_diag3">Give me another bottle of soy sauce.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kappa_diag4">Give me another bottle of wasabi.</button>
-        </div>
-
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <div id="breadbox" name="breadbox" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>BreadBox</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/breadbox0.jpg" src="img/breadbox0_low.jpg"></p>
-	  <br>
-	  <p><img width="100%" class="lazyload blur" data-src="img/breadbox1.jpg" src="img/breadbox1_low.jpg"></p>
-	  <p align="left">If you want to have delicious breads, go to Breadbox at KitaShinYokohama(B25) next to ShinYokohama(B26). You can get it only to go.</p>
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x60185f2c831a5751:0xababc8198deeeb68?utm_source=mstt_1" data-iframely-url="//cdn.iframe.ly/5MN4lc1"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/breadbox2.jpg" src="img/breadbox2_low.jpg"></p>
-	  <p align="left">This announcement of japanese is shown on the door of the store. Above picture is translated it in English. My wife loves quality, taste and cost of these breads!</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/breadbox3.jpg" src="img/breadbox3_low.jpg"></p>
-	  <p align="left">The store opens 9:30-16:00, but it closes earlier if all breads were sold out. I recomment let you go there in the morning.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/breadbox4.jpg" src="img/breadbox4_low.jpg"></p>
-	  <p align="left">This is on sale today. But in this store all breads are so cheper than common such store in japan.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/breadbox5.jpg" src="img/breadbox5_low.jpg"></p>
-	  <p align="left">If you finish choosing and taking breads, go to the register and pay.<br><br><br></p>
-        </div>
-
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <div id="yokohamaya" name="yokohamaya" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>Yokohama-Ya (横濱屋)</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/yokohamaya1.jpg" src="img/yokohamaya1_low.jpg"></p>
-	  <p align="left">Iekei, or house style ramen(家系), is a style of ramen with fatty pork-soy-sauce flavored soup with thick flat noodles.</p>
-	  <p align="left">Yokohamaya is near Nippa(B27). Please refer to the map below.</p>
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x60185f34988268cd:0xde46449ceb27798?utm_source=mstt_1" data-iframely-url="//cdn.iframe.ly/qSQA5J8"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/yokohamaya2.jpg" src="img/yokohamaya2_low.jpg"></p>
-	  <p align="left">This is the appearance of Yokohamaya.</p>
-	  <p align="left">This restaurant is very busy in 12:00-14:00, so I strongly recommend to avoid visiting at that time.</p>
-	  <p align="left">The yellow circle of the picture on the bottom, is the register and they can accept payment only with cash.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/yokohamaya3.jpg" src="img/yokohamaya3_low.jpg"></p>
-	  <p align="left">This is the menu. I recommend the Ramen. It is enough to enjoy Iekei(家系) ramen. If you enjoy much more, for example dumplings, please order B or C set. In case of both B set and C set, you can choose dumplings of either extra vegetables or extra meat.</p>
-	  <p align="left">Call the staff with raising your hand and order them.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/yokohamaya4.jpg" src="img/yokohamaya4_low.jpg"></p>
-	  <p align="left">On the table, there are many kind of spices.
-	    <br>①Sichuan vegetables: Take them on the small dish, and refill free.
-	    <br>②Hot miso: If you want to make the ramen more hot, put it. Pay attention that it is so hot.
-	    <br>③Red pickled ginger.
-	    <br>④Ground garlic.
-	    <br>⑤Chili oil.
-	    <br>⑥Vinegar.
-	    <br>⑦Dumpling sauce</p>
-	  <p align="left">After finishing your meal, you take the receipt on the table and go to the register to pay.</p>
-	  <h3>Japanese sentenses</h3>
-	  <p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese translations would be shown. It would be help you.</p>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yoko_diag1">Give me another bottle of sichuan vegetables.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yoko_diag2">Give me another bottle of water.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yoko_diag3">Give me a Ramen.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yoko_diag4">Give me a Ramen and B set with dumplings of extra vegetables.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yoko_diag5">Give me a Ramen and C set with dumplings of extra meats.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yoko_diag6">Give me a Ramen and B set with dumplings of extra vegetables.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yoko_diag7">Give me a Ramen and C set with dumplings of extra meats.</button>
-        </div>
-
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <div id="shabuyo" name="shabuyo" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>Shabu-Yo (しゃぶ葉)</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/shabu1.jpg" src="img/shabu1_low.jpg"></p>
-	  <p align="left">You can enjoy inexpensive japanese shabu-shabu, Shabu-Yo. It is near the bus stop of Mataguchi-bashi. Get off at the 1st bus stop from ShinYokohama. You can find more information about the bus terminal and timetables at the bottom of this section (<a href="#mataguchibashi">here</a>).</p>
-	  <p align="left">The map is shown below.</p>
-	  <p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75.0019%;"><iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC71-uPMFmOS0BZjuWWgWCHrZDV_63lYJY&q=%E5%8F%88%E5%8F%A3%E6%A9%8B%EF%BC%88%E3%83%90%E3%82%B9%EF%BC%89&center=35.50225,139.6082&zoom=15" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen allow="autoplay; encrypted-media"></iframe></div></p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shabu2.jpg" src="img/shabu2_low.jpg"></p>
-	  <p align="left">This is the menu I recommend. From ① to ③, these are menu for lunch. ① is only pork shabu-shabu. ② is both beef and pork shabu-shabu. ③ is both japanese beef and pork shabu-shabu.</p>
-	  <p align="left">From ④ to ⑥, these are menu for dinner. ④ is only pork shabu-shabu. ⑤ is both beef and pork shabu-shabu. ⑥ is both japanese beef and pork shabu-shabu.</p>
- 	  <p align="left">You can enjoy all-you-can-eat shabushabu above menu whichever you choose. If you want, you can also order all-you-can-drink soft drinks for 200 yen.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shabu3.jpg" src="img/shabu3_low.jpg"></p>
-	  <p align="left">The picture on the right, is the shabushabu pot. One is the broth made from kelp, this cannot be choosed. Another is the broth you can choose. </p>
-	  <p align="left">You can choose the broth from the picture on the left. ① is just like sukiyaki's soup and it is a litte sweet and soysauce's taste flavor. ② is hot and just like  Korean stew. ③ is yuzu taste flavor and just like the stew served to sumo wrestlers. ④ is brown rice taste flavor and the soup made from soy milk. You can also choose seasonal broth, but it would be difficult to imagine what kind of taste because the staff cannot explain it in english.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shabu4.jpg" src="img/shabu4_low.jpg"></p>
-	  <p align="left">It is the time to enjoy all-you-can-eat. You can take any vegetables, mushrooms and to-fu you want, in the dish which is shown by the picture with the red circle. Then put them into the shabushabu pot like the picture.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shabu5.jpg" src="img/shabu5_low.jpg"></p>
-	  <p align="left">You can take any kind of both dip sauces and condiments you want. In the upper of the picture, there are condiments.
-	    <br>① is chopped leeks.
-	    <br>② is grated ginger.
-	    <br>③ is chinese seasonings.
-	    <br>④ is fried red onion.
-	    <br>⑤ is grated garlic.
-	    <br>⑥ is condiment paste made from yuzu zest and chili peppers.
-	    <br>⑦ is grains pepper.
-	    <br>⑧ is grated radish.
-	    <br>⑨ is while-grain mustard.
-	    <br>⑩ is chopped okra.
-	    <br>⑪  is red pepper.</p>
-	  <p align="left">In the lower of the picture, there are dip sauces.
-	    <br>① is like onion dressing.
-	    <br>② is ponzu sauce, which is a sour orange-based sauce.
-	    <br>③ is the japanese broth.
-	    <br>④ is salsa sauce.</p>
-	  <p align="left">You will also find sesame sauce. In usual, I don't need any dip sauces because I feel these tastes are too rich. </p>
-	  <p align="left">Take the dish which is shown by the picture with red ciecle, and pour one dip sauce in it. Then put condiments into it. Like below.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/shabu6.jpg" src="img/shabu6_low.jpg"></p>
-	  <p align="left">The meat is thinly sliced, so dipping the entire piece into the broth two or three times should cook it thoroughly. Once the meat changes color it is ready to be eaten. For beef, the color will turn from red to pink. Pork will turn white. Be sure to cook pork and chicken longer than beef to be sure it is thoroughly cooked before eating.</p>
-	  <p align="left">If you want to have another meat, push the bell on the table to call the staff and order both what kind of meat and how many dishes of meat. It would be helpful to use japanese sentences at the end of this section.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shabu7.jpg" src="img/shabu7_low.jpg"></p>
-	  <p align="left">You can also enjoy desserts. The upper of the picture shows dessert cups (red circle), shaved ice vendor (blue circle) and the soft serve vender (yellow circle). The lower of the picture shows waffle iron. ① is waffle dough. Take ONLY one cup of waffle dough, then put it into ② waffle iron and wait for 2 minutes. If you want, you can use timer (red circle).</p>
-	  <hr style="border-top: 3px double;">
-	  <p id="mataguchibashi" align="left"><b><u>Mataguchibashi</u></b> bus stop</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/mata1.jpg" src="img/mata1_low.jpg"></p>
-	  <p align="left">This is the bus terminal (No.2) for Mataguchibashi in ShinYokohama station. Get on the bus shown below. Whether you get on both of Tokyu bus or Yokohama bus, get off at next bus stop for Matagichibashi.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/mata2.jpg" src="img/mata2_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">Tokyu timetable from ShinYokohama to Mataguchibashi is shown below.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/mata3.jpg" src="img/mata3_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">Yokohama timetable from ShinYokohama to Mataguchibashi is shown below.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/mata4.jpg" src="img/mata4_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">This is Mataguchibashi bus stop for returncoming to ShinYokohama station.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/mata5.jpg" src="img/mata5_low.jpg"></p>
-	  <p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75.0019%;"><iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC71-uPMFmOS0BZjuWWgWCHrZDV_63lYJY&q=35.503048,139.607413&zoom=17" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen allow="autoplay; encrypted-media"></iframe></div></p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">You should get on ONLY Tokyu bus for returncoming to ShinYokohama. Don't worry because you can get on only 'Red bus'. Tokyu timetable from Mataguchibashi to ShinYokohama is shown below.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/mata6.jpg" src="img/mata6_low.jpg"></p>
-	  <h3>Japanese sentenses</h3>
-	  <p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese translations would be shown. It would be help you.</p>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag1">Where is the bus terminal No.2?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag2">Where is vegetables?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag3">Where is condiments?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag4">Where is dip sauces?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag5">Where is chopsticks?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag6">Where is vegetables' dishes?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag7">Where is dip sauces' cups?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag8">Where can I have a glass of water?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag9">Can I have all-you-can-drink soft drinks?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag10">Which is the broth made from kelp?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag11">Can I have 3 more dishes of beef.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag12">Can I have 3 more dishes of pork.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag13">Can I have 6 more dishes of beef.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag14">Can I have 6 more dishes of pork.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag15">Where is the waffle iron?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shabu_diag16">Where is dessert cups?</button>
-	</div>
-
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <div id="ringerhut" name="ringerhut" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>RingerHut (リンガーハット)</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/ringer1.jpg" src="img/ringer1_low.jpg"></p>
-	  <p align="left">RingerHut serves you Chanpon. Champon is a kind of noodle soup topped with a variety of ingredients such as seafood and vegetable. RingerHut is much near the ShinYokohama station. See below.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/ringer2.jpg" src="img/ringer2_low.jpg"></p>
-	  <p align="left">Go down the stairs from the concourse of ShinYokohama station. Go up the stairs from Yokohama subway. After reaching to 1F, go along the red arrow of the picture. Then go to the far end of the gourmet street. This is the appearance of the RingerHut.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/ringer3.jpg" src="img/ringer3_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/ringer4.jpg" src="img/ringer4_low.jpg"></p>
-	  <p align="left">This is the menu for lunchtime until 15:00. ① shows that the fee of Champon with 5 dumplings is 680 yen, and Champon with 3 dumplings is 580 yen. In case of ONLY Champon, it is same fee even double noodle.</p>
-	  <p align="left">② shows that the fee of deep fried noodle with starchy sauce with 5 dumplings is 720 yen, and 3 dumplings is 620 yen.</p>
-	  <p align="left">I recommend Champon with 5 dumplings. If you want to have much more, order double noodle.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/ringer5.jpg" src="img/ringer5_low.jpg"></p>
-	  <p align="left">① is the sauce for dumplings.<br>② is vinegar.<br>③ is pepper.<br>④ is chili oil.<br>⑤ is the sauce of deep fried noodle.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/ringer6.jpg" src="img/ringer6_low.jpg"></p>
-	  <p align="left">Finishing your meal, go to the register which is shown by yellow circle of the picture. PASMO can be used.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>Japanese sentenses</h3>
-	  <p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese translations would be shown. It would be help you.</p>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hut_diag1">Where is the groumet street?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hut_diag2">Where is RingerHut?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hut_diag3">Champon and 5 dumplings, please.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hut_diag4">Double noodle, please.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hut_diag5">Eeep fried noodle with starchy sauce with 5 dumplings, please.</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hut_diag6">Give me another bottle of water.</button>
-	</div>
-
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <div id="shato" name="shato" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>Chateraise (シャトレーゼ)</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/daiso0.jpg" src="img/daiso0_low.jpg"></p>
-	  <p align="left">Chateraise is in CenterMinami(B29) and you can get japanese sweets that is reasonable price.</p>
-	  <p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75.0019%;"><iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC71-uPMFmOS0BZjuWWgWCHrZDV_63lYJY&q=35.543725,139.572708&zoom=17" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen allow="autoplay; encrypted-media"></iframe></div></p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato1.jpg" src="img/shato1_low.jpg"></p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato2.jpg" src="img/shato2_low.jpg"></p>
-	  <p align="left">Go to Kouhoku Tokyu Shopping Center and go down the stairs. Chateraise is in B1F.</p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">Recommended japanese sweets would be shown below.</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato3.jpg" src="img/shato3_low.jpg"></p>
-	  <p align="left"><u>Ichogo Daifuku</u><br>
-	    Ichigo daifuku is a soft rice cake stuffed with sweet bean paste and a strawberry. It is a popular traditional Japanese sweet. "Ichigo" means "strawberry" in Japanese and "daifuku" is a soft rice cake, usually stuffed with sweet bean paste.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato4.jpg" src="img/shato4_low.jpg"></p>
-	  <p align="left"><u>Yomogi Manjyu</u><br>
-	    Yomogi Manjyu is shown on the right of the picture, bean-paste bun with japanese mugwort. Yomogi Dango is shown on the left of the picture and rice-flour dumplings mixed with japanese mugwort.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato5.jpg" src="img/shato5_low.jpg"></p>
-	  <p align="left"><u>Sakura Mochi</u><br>
-	    Sakura Mochi is a pink rice cake filled with sweetened bean-paste, wrapped in a salt-preserved cherry leaf. "Sakura" means "cherryblossom" in japanese and "Mochi" means a soft rice cake.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato6.jpg" src="img/shato6_low.jpg"></p>
-	  <p align="left"><u>Shio Daifuku</u><br>
-	    Shio Daifuku is a soft rice cake stuffed with salt-seasoned bean paste. "Shio" means "salt" in Japanese and "daifuku" is a soft rice cake.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato7.jpg" src="img/shato7_low.jpg"></p>
-	  <p align="left"><u>Karinto Manjyu</u><br>
-	    Karinto Manjyu is fried-buns containing strained adzki-beans paste with crispy dough (of brown cane sugar). "Fried dough cookies" means in japanese.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato9.jpg" src="img/shato9_low.jpg"></p>
-	  <p align="left"><u>Reasonable Manjyu</u><br>
-	    Both Manjyus are sets of 10 pieces about 100 yen and rice cakes filled with sweetened bean-paste. The pink one is a pink rice cake with the smell of cherry.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato10.jpg" src="img/shato10_low.jpg"></p>
-	  <p align="left"><u>Pancakes</u><br>
-	    On the left of the picture, it is the pancake with whipped cream. Another is the bean-paste pancake and called "Dorayaki" in japanese.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/shato12.jpg" src="img/shato12_low.jpg"></p>
-	  <p align="left"><u>Castella</u><br>
-	    It is the castella with coarse sugar covering the bottom.</p>
-	  <hr style="border-top: 3px double;">
-	  <h3>Japanese sentenses</h3>
-	  <p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese translations would be shown. It would be help you.</p>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chato_diag1">Where is Ichigo Daifuku?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chato_diag2">Where is Yomogi Manjyu?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chato_diag3">Where is Sakura Mochi?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chato_diag4">Where is Shio Daifuku?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chato_diag5">Where is Karinto Manjyu?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chato_diag6">Where is Dorayaki?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chato_diag7">Where is the register?</button>
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chato_diag8">Are you at the end of the line?</button>
-	</div>
-
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /f -->
-
-  <!-- ========== Shopping SECTION ========== -->
-  <section id="shopping" name="shopping"></section>
-  <div id="f">
-    <div class="container">
-      <div class="row">
-	<h3>SHOPPING</h3>
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-      </div>
-
-      <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-      
-      <div class="row">
-        <!-- Food INFORMATION -->
-        <div id="cando" name="cando" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>CanDo 100yen shop</h3>
-	  <p><a href="https://www.cando-web.co.jp/e/index.html"><img width="100%" src="https://www.cando-web.co.jp/e/common/images/top/mainvisual_top.jpg"></a></p>
-	  <p align="left">CanDo is the nearest 100yen store from ShinYokohama and about 5 minutes on foot. The map is shown below.</p>
-	  <p><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75.0019%;"><iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC71-uPMFmOS0BZjuWWgWCHrZDV_63lYJY&amp;q=35.509459,139.619168" style="border: 0; top: 3px0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen allow="autoplay; encrypted-media"></iframe></div></p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/cando1.jpg" src="img/cando1_low.jpg"></p>
-	  <p align="left">CanDo is 4F in Prince PePe which is the shopping plaza of ShinYokohama Prince Hotel. And you can use PASMO with payment.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/cando2.jpg" src="img/cando2_low.jpg"></p>
-	  <p align="left">My recommendations of CanDo's items are like above.</p>
-	  <p align="left">①<u>Fisheye Lens</u><br>Do you know the fisheye lens? It is one of common accessories of DSLR camera. Many users of action cameras like Gopro, use it for getting more wide views and spherical views. You can buy such lens for smartphone by only 100yen.</p>
-	  <p align="left">②<u>Silicon magnet clips</u><br>This clip is made of silicon, rubber, steel and magnet. You can bend it freely and fix it by magnet so that you roll up cables around PC, earphones and headphones, and clips billls or memos.</p>
-	  <p align="left">③<u>Wire Book Holder</u><br>When reading books, studying and learning, do you want to hold books so that it is easy to do? You can do it with the wire book holder. I also use it for either notebookPC or tablet.</p>
-	  <p align="left">④<u>Ice Tray</u><br>Have you had a trouble that there was no ice when someone came home in happen? At such time, the ice tray would be useful. In CanDo there are many kinds, which means ice shapes, of ice trays. So I have 3 trays in my freezer :)</p>
-	</div>
-
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <div id="daiso" name="daiso" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>Daiso</h3>
-	  <p align="left">There are many Daisos in Yokohama, but the Daiso of following map is largest. I strongly recommend to go there.</p>
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x6018f6326eeed4b5:0x598500d5bdbc508a?utm_source=mstt_1" data-iframely-url="//cdn.iframe.ly/YkGcb9M"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/daiso0.jpg" src="img/daiso0_low.jpg"></p>
-	  <p align="left">Daiso's nearest station is Center-Minami(B29) from ShinYokohama(B25).</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/daiso1.jpg" src="img/daiso1_low.jpg"></p>
-	  <p align="left">①From Center-Minami, go to KOHOKU TOKYU Shopping Center.
-	    <br>②Daiso is 7F.
-	    <br>③The floor of Daiso is so large, but it is easy to meet again if you will enjoy shopping separately. Because many props on the floor are numbered.</p>
-	  <p align="left"><br>I would recommend some items it is pretty useful.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/daiso2.jpg" src="img/daiso2_low.jpg"></p>
-	  <p align="left"><u>Easy sealer</u><br>With easy sealer you can reseal foil bags of snacks so that they stay fresh till the last bite! (Batteries sold separately)</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/daiso3.jpg" src="img/daiso3_low.jpg"></p>
-	  <p align="left"><u>Bathroom sink garbage catcher</u><br>With the bathroom sink garbage catcher, you can get garbages of bathroom sink easily. Pull the drain cap out, then put the caatcher on it like above picture.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/daiso4.jpg" src="img/daiso4_low.jpg"></p>
-	  <p align="left"><u>Magnet case</u><br>With the magnet case, you can put spices on the refrigerator. My wife loves tea, so many tea leaves are put on the wall by it.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/daiso5.jpg" src="img/daiso5_low.jpg"></p>
-	  <p align="left"><u>Egg Timer</u><br>With the egg timer, you can get perfect boiled eggs easily. For a start, the indicator on the egg timer will be in pink. As it sits in the pot of boiling water, the indicator will gradually change from pink to white. If you notice that the indicator is white at the area where the word "SOFT" is. Remove the eggs when the indicator turned white at the area between SOFT and MEDIUM (second line from the bottom). And if you would like a hard boiled egg, wait for the pink indicators to change to white.</p>
-        </div>
-
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <div id="espot" name="espot" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>Espot</h3>
-	  <p><img width="100%" class="lazyload blur" data-src="img/espot1.jpg" src="img/espot1_low.jpg"></p>
-	  <p align="left">It is the supermarket in Kita-ShinYokohama(B26), next to ShinYokohama(B25). The map is shown below.</p>
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x60185f2bc27f7d43:0x5ad5500d3c29ef25?utm_source=mstt_1" data-iframely-url="//cdn.iframe.ly/bej4B4m"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/espot2.jpg" src="img/espot2_low.jpg"></p>
-	  <p align="left">At the entrance you take the shopping cart and carry the shopping basket on it like above picture.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><img width="100%" class="lazyload blur" data-src="img/espot3.jpg" src="img/espot3_low.jpg"></p>
-	  <p align="left">When finishing shopping, get in line of each register. In your turn, put your baskets on front of the register. After processing payment, pay and take the baskets.</p>
-        </div>
-
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /f -->
-
-
-  <!-- ========== Medicine SECTION ========== -->
-  <section id="medicine" name="medicine"></section>
-  <div id="f">
-    <div class="container">
-      <div class="row">
-	<h3>MEDICINE</h3>
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-      </div>
-
-      <div class="row">
-        <!-- Medicine INFORMATION -->
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-        <div id="fitcare" name="fitcare" class="col-lg-6 col-lg-offset-3">
-          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-	  <h3>Fit Care</h3>
-	  <p align="left">There are 3 Fit Care stores near ShinYokohama. You can buy many kinds of medicines there with PASMO. The maps of each store are shown below.</p>
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x60185ed0340f20e1:0x1502a830b08896a2?utm_source=mstt_1" data-iframely-url="//cdn.iframe.ly/V8WYsuQ"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <p align="left">1F floor of ShinYokohama station.</p>
-	  <hr style="border-top: 3px double;">
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x60185ed06386f249:0x953e5ca78cf65e31?utm_source=mstt_1" data-iframely-url="//cdn.iframe.ly/QTUJjVy"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <p align="left">B1 floor of shopping plaza, Prince PePe</p>
-	  <hr style="border-top: 3px double;">
-	  <p><div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x60185ed397260099:0x6d28dd84acea3616?utm_source=mstt_1" data-iframely-url="//cdn.iframe.ly/kY8V6IQ"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script></p>
-	  <p align="left">The nearest store from NISSAN stadium</p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">You can take cold medicines, pain killer, fever reducer and etc. And you can pay with PASMO. There are my recommendations below. If you want to but it, show the picture to the staff.</p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">Cold medicines</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/hac1.jpg" src="img/hac1_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">Motion sickness pill</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/hac2.jpg" src="img/hac2_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">Eye drops</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/hac3.jpg" src="img/hac3_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">Cooling gel sheet</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/hac4.jpg" src="img/hac4_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">Ointment</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/hac5.jpg" src="img/hac5_low.jpg"></p>
-	  <hr style="border-top: 3px double;">
-	  <p align="left">antiseptic (you can also buy it both CanDo or Daiso)</p>
-	  <p><img width="100%" class="lazyload blur" data-src="img/hac6.jpg" src="img/hac6_low.jpg"></p>
-	</div>
-
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /f -->
-
-
-  <!-- ========== BUTTON SECTION ========== -->
-  <section id="dialog" name="dialog"></section>
-  <div id="f">
-    <div class="container">
-      <div class="row">
-        <h3>Japanese Dialogues</h3>
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-	<p align="left">When you want to ask someone in japanese, please tap buttons below. Japanese messages would be shown. It would be help you.</p>
-        <!-- INTRO INFORMATIO-->
-	<hr style="border-top:double;">
-	<p align="left"><u>Station</u></p>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag1">Where can I buy the ticket?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag2">Is the train delayed?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag3">Will the train come soon?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag4">Where is the map around the station?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag5">Where is the track (platform)?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag6">Where can I buy 1day pass?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag7">Where is the gate?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag8">Where can I touch PASMO on?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag9">Where is the ticket window?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag10">Where is the elevator (lift)?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag11">Where can I top up PASMO?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag12">How can I have amount of yen left on PASMO?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag13">Where can I buy the ticket?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag14">Whｨch exit number can I go out at?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag15">This is our stop.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag16">Can I reach to Kannai station?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag17">Can I reach to Center-Minami station?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag18">Can I reach to Kita-ShinYokohama?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag19">Can I reach to Nippa station?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag20">Can I reach to ShinYokohama station?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sta_diag21">Can I reach to the station?</button>
-	<hr style="border-top:double;">
-	<p align="left"><u>Bus</u></p>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag1">Where is the bus stop?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag2">Are you at the end of the the line?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag3">Where can I touch PASMO on?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag4">I would like to buy 1day pass.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag5">Does this bus go to there?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag6">Let me know when the bus reach there.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag7">Will the bus come in about 5 minutes?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag8">Will the bus come in about 10 minutes?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag9">This is our stop.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bus_diag10">Next is our stop.</button>
-	<hr style="border-top:double;">
-	<p align="left"><u>Distination</u></p>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goto_diag1">I want to go to NISSAN Stadium.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goto_diag2">I want to go to Lalaport Yokohama.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goto_diag3">I want to go to Kannai station.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goto_diag4">I want to go to Center-Minami station.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goto_diag5">I want to go to Kita-ShinYokohama station.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goto_diag6">I want to go to Nippa station.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goto_diag7">I want to go to ShinYokohama station.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goto_diag8">I want to go to Prince PePe.</button>
-	<hr style="border-top:double;">
-	<p align="left"><u>Restaurant</u></p>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#food_diag1">Give me water.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#food_diag2">Give me hot reen tea.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#food_diag3">Give me cold tea.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#food_diag4">My food is not here yet.</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#food_diag5">How long do I wait or?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#food_diag6">Can I pay by PASMO?</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#food_diag7">Can I pay by the credit card?</button>
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /f -->
-
-  <!-- ========== CONTACT SECTION ========== -->
-  <section id="contact" name="contact"></section>
-  <div id="f">
-    <div class="container">
-      <div class="row">
-        <h3>CONTACT ME</h3>
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-
-        <div class="col-lg-6 col-lg-offset-3">
-          <p>Let me know if you want to know more japanese phrases, how to enjoy in detail and more. Please don't hesitate.</p>
-          <p>yamashimo.k[at]gmail.com</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="copyrights">
-    <div class="container">
-      <p>
-        &copy; Copyrights <strong>Minimal</strong>. All Rights Reserved
-      </p>
-      <div class="credits">
-        <!--
-          You are NOT allowed to delete the credit link to TemplateMag with free version.
-          You can delete the credit link only if you bought the pro version.
-          Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/minimal-bootstrap-template/
-          Licensing information: https://templatemag.com/license/
-        -->
-        Created with Minimal template by <a href="https://templatemag.com/">TemplateMag</a>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- モーダルダイアログ modal dialog -->
-  <div class="modal fade" id="sta_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where can I buy the ticket?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">券売機はどこですか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Is the train delayed?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">電車は遅れていますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Will the train come soon?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">電車はもうすぐ来ますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the map around the station?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">駅前の地図はどこにありますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag5" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the track (platform)?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">乗り場はどこですか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag6" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where can I buy 1day pass?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">1日乗車券を買いたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag7" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the gate?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">改札はどこですか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag8" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where can I touch PASMO on?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">PASMOはどこにタッチすればいいですか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag9" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the ticket window?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">窓口はどこですか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag10" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the elevator (lift)?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">エレベーターはありますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag11" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where can I top up PASMO?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">PASMOはどこでチャージできますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag12" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">How can I have amount of yen left on PASMO?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">PASMOの残高を知りたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag13" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where can I buy the ticket?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">切符はどこで買えますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag14" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Whｨch exit number can I go out at?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">何番出口から出ればいいですか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag15" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">This is our stop.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ここで降ります</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag16" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I reach to Kannai station?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">関内駅に行きますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag17" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I reach to Center-Minami station?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">センター南駅に行きますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag18" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I reach to Kita-ShinYokohama?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">北新横浜駅に行きますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag19" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I reach to Nippa station?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">新羽駅に行きますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag20" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I reach to ShinYokohama station?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">新横浜駅に行きますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="sta_diag21" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I reach to the station?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">この駅に行きますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-
-
-  <div class="modal fade" id="bus_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the bus stop?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">バス停はどこですか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="bus_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Are you at the end of the the line?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">最後尾はここですか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="bus_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where can I touch PASMO on?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">PASMOはどこにタッチすればいいですか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="bus_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">I would like to buy 1day pass.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">1日乗車券を買いたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="bus_diag5" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Does this bus go to there?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">このバスはそこに行きますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="bus_diag6" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Let me know when the bus reach there.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">そこに着いたら教えてくれませんか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="bus_diag7" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Will the bus come in about 5 minutes?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">バスはあと5分くらいで来ますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="bus_diag8" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Will the bus come in about 10 minutes?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">バスはあと10分くらいで来ますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="bus_diag9" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">This is our stop.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ここで降ります</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="bus_diag10" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Next is our stop.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">次で降ります</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-
-
-  <div class="modal fade" id="goto_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">I want to go to NISSAN Stadium.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">日産スタジアムに行きたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="goto_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">I want to go to Lalaport Yokohama.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ららぽーと横浜に行きたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="goto_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">I want to go to Kannai station.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">関内駅に行きたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="goto_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">I want to go to Center-Minami station.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">センター南駅に行きたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="goto_diag5" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">I want to go to Kita-ShinYokohama station.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">北新横浜駅に行きたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="goto_diag6" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">I want to go to Nippa station.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">新羽駅に行きたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="goto_diag7" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">I want to go to ShinYokohama station.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">新横浜駅に行きたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="goto_diag8" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">I want to go to Prince PePe.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">プリンスぺぺに行きたい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-
-
-  <div class="modal fade" id="food_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me water.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">お水を下さい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="food_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me hot reen tea.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">温かいお茶を下さい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="food_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me cold tea.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">冷たいお茶を下さい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="food_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">My food is not here yet.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">注文した物がまだ来ません</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="food_diag5" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">How long do I wait or?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">どのくらい待ちますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="food_diag6" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I pay by PASMO?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">PASMOで支払いできますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="food_diag7" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I pay by the credit card?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">クレジットカードは使えますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-
-  <div class="modal fade" id="yayoi_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the rice steamer?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ご飯はどこでおかわりできますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="yayoi_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me another bottle of japanese pickles.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">お漬物のおかわりをください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="yayoi_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the tea pot?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">お茶はどこでおかわりできますか？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="yayoi_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me another bottle of water.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">お水のおかわりをください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-
-
-  <div class="modal fade" id="kappa_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Have I already called? (with the ticket in your hand)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">もう呼ばれました？</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="kappa_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me another bottle of powdered tea.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">粉茶をください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="kappa_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me another bottle of soy sauce.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">醤油をください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="kappa_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me another bottle of wasabi.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">わさびをください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-
-
-  <div class="modal fade" id="yoko_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me another bottle of sichuan vegetables.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ザーサイのおかわりをください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="yoko_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me another bottle of water.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">お水のおかわりをください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="yoko_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me a Ramen.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ラーメンをひとつください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="yoko_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me a Ramen and B set with dumplings of extra vegetables.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ラーメンとBセットをください、野菜餃子で。</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="yoko_diag5" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me a Ramen and C set with dumplings of extra meats.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ラーメンとCセットをください、野菜餃子で。</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="yoko_diag6" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me a Ramen and B set with dumplings of extra vegetables.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ラーメンとBセットをください、肉餃子で。</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="yoko_diag7" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me a Ramen and C set with dumplings of extra meats.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ラーメンとCセットをください、肉餃子で。</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-
-  <div class="modal fade" id="shabu_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the bus terminal No.2?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">2番バス乗り場はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is vegetables?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">野菜はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is condiments?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">薬味はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is dip sauces?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">タレはどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag5" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is chopsticks?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">お箸はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag6" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is vegetables' dishes?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">野菜の取り皿はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag7" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is dip sauces' cups?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">タレの器はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag8" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where can I have a glass of water?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">お水はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag9" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I have all-you-can-drink soft drinks?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ドリンクバーが欲しい</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag10" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Which is the broth made from kelp?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">どっちが昆布だしですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag11" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I have 3 more dishes of beef.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">3皿牛肉をください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag12" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I have 3 more dishes of pork.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">3皿豚肉をください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag13" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I have 6 more dishes of beef.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">6皿牛肉をください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag14" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Can I have 6 more dishes of pork.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">6皿豚肉をください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag15" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the waffle iron?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ワッフルはどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="shabu_diag16" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is dessert cups?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">デザートのカップはどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-
-  
-  <div class="modal fade" id="hut_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the groumet street?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">グルメストリートはどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="hut_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is RingerHut?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">リンガーハットはどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="hut_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Champon and 5 dumplings, please.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">ちゃんぽんと餃子5個</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="hut_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Double noodle, please.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">麺2倍で</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="hut_diag5" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Eeep fried noodle with starchy sauce with 5 dumplings, please.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">かた焼きそばと餃子5個</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="hut_diag6" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Give me another bottle of water.</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">水をください</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  
-  <div class="modal fade" id="chato_diag1" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is Ichigo Daifuku?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">いちご大福はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="chato_diag2" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is Yomogi Manjyu?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">よもぎ饅頭はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="chato_diag3" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is Sakura Mochi?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">さくら餅はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="chato_diag4" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is Shio Daifuku?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">塩大福はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="chato_diag5" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is Karinto Manjyu?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">かりんとう饅頭はどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="chato_diag6" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is Dorayaki?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">どらやきはどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="chato_diag7" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Where is the register?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">レジはどこですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-  <div class="modal fade" id="chato_diag8" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="demoModalTitle">Are you at the end of the line?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><h3><div class="modal-body">列の最後尾はここですか</div></h3><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button></div></div></div></div>
-
-	  
-  <!-- LazySizes Javascript File -->
-  <script src="js/lazysizes.min.js"></script>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/php-mail-form/validate.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
+    <!-- Java Script    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
