@@ -819,7 +819,7 @@ input[type="button"] {
    display: inline-block;
    font-family: "metropolis-bold", sans-serif;
    font-size: 1.2rem;
-   text-transform: uppercase;
+#   text-transform: uppercase;
    letter-spacing: .3rem;
    height: 5.4rem;
    line-height: 5rem;
@@ -1992,7 +1992,7 @@ body.search-is-visible {
 .header__search-trigger::before {
    font-family: "metropolis-semibold", sans-serif;
    font-size: 12px;
-   text-transform: uppercase;
+#   text-transform: uppercase;
    letter-spacing: 2px;
    line-height: 21px;
    content: "Search";
@@ -2140,7 +2140,7 @@ body.search-is-visible {
    font-family: "metropolis-semibold", sans-serif;
    font-size: 1.4rem;
    color: #FFFFFF;
-   text-transform: uppercase;
+#   text-transform: uppercase;
    letter-spacing: .3rem;
    margin-top: 6rem;
 }
@@ -2465,7 +2465,7 @@ body.search-is-visible {
    font-family: "metropolis-bold", sans-serif;
    font-size: 1.1rem;
    line-height: 2.4rem;
-   text-transform: uppercase;
+#   text-transform: uppercase;
    letter-spacing: .2rem;
    margin-bottom: 2.4rem;
 }
@@ -3166,7 +3166,7 @@ html.no-csstransitions .featured {
    font-family: "metropolis-extrabold", sans-serif;
    font-size: 1.3rem;
    line-height: 3.6rem;
-   text-transform: uppercase;
+#   text-transform: uppercase;
    letter-spacing: .2rem;
    padding: 0 2rem;
    margin: 0 1.2rem 1.5rem 0;
@@ -3281,7 +3281,7 @@ footer h4 {
    font-family: "metropolis-bold", sans-serif;
    font-size: 1.4rem;
    line-height: 1.286;
-   text-transform: uppercase;
+#   text-transform: uppercase;
    letter-spacing: .25rem;
    padding-bottom: 4.2rem;
    color: #FFFFFF;
@@ -3447,7 +3447,7 @@ footer h4::after {
    background-size: 10px 16px;
    color: rgba(255, 255, 255, 0.5);
    text-align: center;
-   text-transform: uppercase;
+#   text-transform: uppercase;
    border-radius: 50%;
    -webkit-transition: all 0.3s ease-in-out;
    transition: all 0.3s ease-in-out;
@@ -3734,7 +3734,7 @@ footer h4::after {
    margin-left: 0;
    font-family: "metropolis-bold", sans-serif;
    font-size: 12px;
-   text-transform: uppercase;
+#   text-transform: uppercase;
    letter-spacing: 1px;
 }
 
@@ -3769,7 +3769,7 @@ footer h4::after {
    display: block;
    font-family: "metropolis-medium", sans-serif;
    font-size: 12px;
-   text-transform: uppercase;
+#   text-transform: uppercase;
    letter-spacing: 2.5px;
    color: #7f7f7f;
    margin-bottom: 1.2rem;
