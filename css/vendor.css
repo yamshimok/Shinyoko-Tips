@@ -26,7 +26,8 @@
    right: 0;
    bottom: 0;
    left: 0;
-   white-space: nowrap;
+#   white-space: nowrap;
+   white-space: normal;
    background: #ffffff;
    background: white;
    outline: none !important;
